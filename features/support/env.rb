@@ -23,6 +23,5 @@ require 'faker'
 
 Capybara.configure do |config|
     # digo que o driver padrao eh o do selenium.
-Capybara.default_driver = :selenium_chrome
-
-  end
+Capybara.default_driver = :selenium
+ end
