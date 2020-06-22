@@ -1,6 +1,6 @@
 #language:pt
 #enconding: utf-8
-
+@compra
 Funcionalidade: Realizar uma compra para um usuário novo e um já cadastrado
 @compranovo
 Esquema do Cenario: Realziar uma compra com um usuário novo
@@ -17,26 +17,13 @@ E finalizar
 
 @compraexistente
 Esquema do Cenario: Realziar uma compra com um usuário novo
-Dado que sou um cliente já existente
+Dado que sou um cliente já existente e vou acessar o sistema
 E vou selecionar o item desejado
 E vou selecionar o tamanho, quantidade, adiciono no carrinho e continuo o pedido
 E vou selecionar outro produto e finalizo a compra
-Quando visualizar os itens no carrinho eu finalizo o pedido
-Entao o sistema irá me apresentar a tela para realizar o login
-E preencho os dados de informações de <login> e <senha> e acesso o sistema
-E qual o endereço desejo
+Quando o sistema irá me apresentar a tela já logada
+Entao seleciono qual o endereço desejo
 E seleciono o frete que eu desejo
 E selecionar a forma de pagamento
 E finalizar
-
-Examples:
-| login     | senha   |
-| "acesso"  | "senha" |
-
-
-
-
-
-
-
 
