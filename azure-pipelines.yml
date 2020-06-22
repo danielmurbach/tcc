@@ -17,7 +17,7 @@ steps:
 - script: |
     gem install bundler
     bundle install --retry=3 --jobs=4
-    cucumber -t @compra
+    
   displayName: 'bundle install'
 
 
