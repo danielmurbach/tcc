@@ -20,20 +20,6 @@ steps:
     
   displayName: 'bundle install'
 
-  - script: |
-    sudo apt-get install unzip
-    $ wget -N https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip -P ~/Downloads
-    unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
-    chmod +x ~/Downloads/chromedriver
-    sudo mv -f ~/Downloads/chromedriver /usr/local/share/chromedriver
-    sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
-    sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
-    
-  displayName: 'install chromedriver'
 
-  - script: |
-    cucumber -t @compra
-    
-  displayName: 'run '
 
 
