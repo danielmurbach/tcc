@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - task: UseRubyVersion@0
@@ -17,8 +17,7 @@ steps:
 - script: |
     gem install bundler
     bundle install --retry=3 --jobs=4
+    cucumber -t @compra
   displayName: 'bundle install'
 
-- script: 
 
- displayName: 'cucumber -t @compra'
