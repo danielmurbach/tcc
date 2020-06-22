@@ -1,0 +1,38 @@
+# Ruby
+# Package your Ruby project.
+# Add steps that install rails, analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/ruby
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UseRubyVersion@0
+  inputs:
+    versionSpec: '>= 2.5'
+
+- script: |
+    gem install bundler
+    bundle install --retry=3 --jobs=4
+  displayName: 'bundle install'
+
+#- script: bundle exec rake
+  #displayName: 'bundle exec rake'
+
+  # - script: |
+  #   sudo apt-get install unzip
+  #   wget -N https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip -P ~/Downloads
+  #   unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
+  #   chmod +x ~/Downloads/chromedriver
+  #   sudo mv -f ~/Downloads/chromedriver /usr/local/share/chromedriver
+  #   sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+  #   sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+  # displayName: 'install chromedriver'
+
+  - script: |
+    cucumber -t @compra
+     
+  displayName: 'run project'
