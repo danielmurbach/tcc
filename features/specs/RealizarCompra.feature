@@ -3,7 +3,7 @@
 @compra
 Funcionalidade: Realizar uma compra para um usuário novo e um já cadastrado
 @compranovo
-Esquema do Cenario: Realziar uma compra com um usuário novo
+Esquema do Cenario: Realizar uma compra com um usuário novo
 Dado que sou um cliente novo 
 E vou selecionar o item desejado
 E vou selecionar o tamanho, quantidade, adiciono no carrinho e finalizo o pedido
@@ -16,7 +16,7 @@ E selecionar a forma de pagamento
 E finalizar
 
 @compraexistente
-Esquema do Cenario: Realziar uma compra com um usuário novo
+Esquema do Cenario: Realizar uma compra com um usuário novo
 Dado que sou um cliente já existente e vou acessar o sistema
 E vou selecionar o item desejado
 E vou selecionar o tamanho, quantidade, adiciono no carrinho e continuo o pedido

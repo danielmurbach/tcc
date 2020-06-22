@@ -1,6 +1,6 @@
 #enconding: utf-8
 
-  #Estanciando as Page Objets
+   #Estanciando as Page Objets
     pageHome = Home.new();
     pageLogin = Login.new();
     pageCadastro = Cadastro.new();

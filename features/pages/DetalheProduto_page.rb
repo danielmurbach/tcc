@@ -43,9 +43,6 @@ class DetalheProduto
     def pagamentoDinheiro
         find("#payment-option-1-container > label > span")
     end 
-    # def pagamentoCartao
-    #     find("#payment-option-1-container > label > span")
-    # end 
     def aceitarTermosPagamento
         find("#conditions-to-approve")
     end
