@@ -19,6 +19,6 @@ steps:
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
-- script: cucumber -t @compra
+- script: 
 
- displayName: 'run projet compra'
+ displayName: 'cucumber -t @compra'
