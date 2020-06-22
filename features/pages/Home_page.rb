@@ -43,4 +43,7 @@ class Home
     def MenuLogin
         find("#_desktop_user_info > div > a")
     end
+    def menuHome
+        find("#_desktop_logo > a")
+    end
 end 
